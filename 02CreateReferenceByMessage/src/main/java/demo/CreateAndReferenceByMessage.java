@@ -21,6 +21,7 @@ public class CreateAndReferenceByMessage {
 			// send to a1 the reference of a2 by message
 			//be carefull, here it is the main() function that sends a message to a1, 
 			//not a1 telling to a2 as you might think when looking at this line:
+	    // a1 is receiver, a2 is message, sender is noSender
 	    a1.tell(a2, ActorRef.noSender());
 	    
 	
