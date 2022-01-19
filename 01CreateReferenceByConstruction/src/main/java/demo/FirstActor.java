@@ -31,7 +31,4 @@ public class FirstActor extends UntypedAbstractActor{
 	public void onReceive(Object message) throws Throwable {
 
 	}
-
-
-
 }
