@@ -12,15 +12,15 @@ public class RespondTo {
 	    final ActorRef a = system.actorOf(Requester.createActor(), "a");
 	    final ActorRef b = system.actorOf(TransmitterActor.createActor(), "b");
 	    final ActorRef c = system.actorOf(Listener.createActor(), "c");
-		
+
 	    // Create list of references
-	    ArrayList<ActorRef> actors = new ArrayList<ActorRef>();
+	    ArrayList<ActorRef> actors = new ArrayList<>();
 	    actors.add(b);
 	    actors.add(c);
 
 	    // Send ref of b to a
 	    a.tell(actors, ActorRef.noSender());
-	    
+
 	    // We wait 5 seconds before ending system (by default)
 	    // But this is not the best solution.
 	    try {
@@ -31,9 +31,9 @@ public class RespondTo {
 			system.terminate();
 		}
 	}
-	
+
 	public static void waitBeforeTerminate() throws InterruptedException {
 		Thread.sleep(5000);
 	}
-	
+
 }

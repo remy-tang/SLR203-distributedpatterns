@@ -7,10 +7,7 @@ import akka.actor.Props;
 import akka.actor.UntypedAbstractActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
-import akka.pattern.Patterns;
 import akka.util.Timeout;
-import scala.concurrent.Await;
-import scala.concurrent.Future;
 
 public class FirstActor extends UntypedAbstractActor{
 	

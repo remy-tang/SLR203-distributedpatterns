@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>akka-patterns</groupId>
-  <artifactId>08RequestBlockWaitForResponse</artifactId>
+  <artifactId>20UncontrolledFlood</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>08RequestBlockWaitForResponse</name>
+  <name>20UncontrolledFlood</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -59,10 +59,12 @@
                     <arguments>
                         <argument>-classpath</argument>
                         <classpath />
-                        <argument>demo.RequestBlockWaitForResponse</argument>
+                        <argument>demo.UncontrolledFlooding</argument>
                     </arguments>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 </project>
+
+

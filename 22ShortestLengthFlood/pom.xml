@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>akka-patterns</groupId>
-  <artifactId>08RequestBlockWaitForResponse</artifactId>
+  <artifactId>22ShortestLengthFlood</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>08RequestBlockWaitForResponse</name>
+  <name>22ShortestLengthFlood</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -30,7 +30,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -59,10 +59,12 @@
                     <arguments>
                         <argument>-classpath</argument>
                         <classpath />
-                        <argument>demo.RequestBlockWaitForResponse</argument>
+                        <argument>demo.ShortestLengthFlooding</argument>
                     </arguments>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 </project>
+
+

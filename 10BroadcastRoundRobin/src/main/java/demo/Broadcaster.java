@@ -1,7 +1,5 @@
 package demo;
 
-import java.time.Duration;
-
 import akka.actor.ActorRef;
 import akka.actor.Props;
 import akka.event.Logging;

@@ -1,16 +1,15 @@
 package demo;
 
-import akka.actor.ActorRef;
 import akka.actor.Props;
 import akka.actor.UntypedAbstractActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
 
 public class Listener extends UntypedAbstractActor{
-	
+
 	// Logger attached to actor
 	private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
-	
+
 	// Actor reference
 	public Listener() {}
 
@@ -26,7 +25,7 @@ public class Listener extends UntypedAbstractActor{
 	public void onReceive(Object message) throws Throwable {
 		if (message instanceof ResponseMessage) {
 			// Print request message from a
-			log.info("["+getSelf().path().name()+"] received response from ["+ getSender().path().name() +"]: ID " 
+			log.info("["+getSelf().path().name()+"] received response from ["+ getSender().path().name() +"]: ID "
 					+ ((ResponseMessage)message).getId() + ", message " + ((ResponseMessage)message).getMessage());
 
 		}

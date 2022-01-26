@@ -1,13 +1,12 @@
 package demo;
 
-import akka.actor.ActorRef;
 import akka.actor.Props;
 import akka.actor.UntypedAbstractActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
 
 public class TransmitterActor extends UntypedAbstractActor{
-	
+
 	// Logger attached to actor
 	private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
 
