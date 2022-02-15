@@ -5,15 +5,16 @@ import akka.actor.UntypedAbstractActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
 
-public class LastActor extends UntypedAbstractActor{
+public class LastActor extends UntypedAbstractActor {
 
 	// Logger attached to actor
 	private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
-	
+
 	// Actor reference
-	
+
 	// Timeout
-	public LastActor() {}
+	public LastActor() {
+	}
 
 	// Static function creating actor
 	public static Props createActor() {
@@ -21,11 +22,12 @@ public class LastActor extends UntypedAbstractActor{
 			return new LastActor();
 		});
 	}
-	
+
 	@Override
 	public void onReceive(Object message) throws Throwable {
 		if (message instanceof String) {
-			log.info("["+getSelf().path().name()+"] has received from ["+ getSender().path().name() +"]:" + (String) message);
+			log.info("[" + getSelf().path().name() + "] has received from [" + getSender().path().name() + "]:"
+					+ (String) message);
 		}
 	}
 }

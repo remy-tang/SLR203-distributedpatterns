@@ -11,7 +11,7 @@ public class Message {
 		this.content = content;
 		this.length = length;
 	}
-	
+
 	public int getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -19,7 +19,7 @@ public class Message {
 	public String getContent() {
 		return content;
 	}
-	
+
 	public int getLength() {
 		return length;
 	}
@@ -30,6 +30,6 @@ public class Message {
 
 	@Override
 	public String toString() {
-		return "[Seq: " + sequenceNumber + ", Length: " + this.length +"] " +  content;
+		return "[Seq: " + sequenceNumber + ", Length: " + this.length + "] " + content;
 	}
 }

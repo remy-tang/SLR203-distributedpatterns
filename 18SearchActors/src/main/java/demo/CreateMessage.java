@@ -2,5 +2,6 @@ package demo;
 
 public class CreateMessage {
 
-	public CreateMessage() {};
+	public CreateMessage() {
+	}
 }

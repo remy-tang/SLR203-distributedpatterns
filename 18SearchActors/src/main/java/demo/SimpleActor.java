@@ -6,14 +6,15 @@ import akka.actor.UntypedAbstractActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
 
-public class SimpleActor extends UntypedAbstractActor{
+public class SimpleActor extends UntypedAbstractActor {
 
 	// Logger attached to actor
 	private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
 	// Actor reference
 	private ActorRef actorRef;
 
-	public SimpleActor() {}
+	public SimpleActor() {
+	}
 
 	// Static function creating actor
 	public static Props createActor() {

@@ -1,4 +1,4 @@
-package akka_patterns.CommunicationTopology;
+package demo;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

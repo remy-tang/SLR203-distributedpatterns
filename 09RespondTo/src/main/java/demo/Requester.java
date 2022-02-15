@@ -8,7 +8,7 @@ import akka.actor.UntypedAbstractActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
 
-public class Requester extends UntypedAbstractActor{
+public class Requester extends UntypedAbstractActor {
 
 	// Logger attached to actor
 	private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
@@ -17,7 +17,8 @@ public class Requester extends UntypedAbstractActor{
 	private ActorRef refB;
 	private ActorRef refC;
 
-	public Requester() {}
+	public Requester() {
+	}
 
 	// Static function creating actor
 	public static Props createActor() {
@@ -28,17 +29,17 @@ public class Requester extends UntypedAbstractActor{
 
 	@Override
 	public void onReceive(Object message) throws Throwable {
-		if(message instanceof ArrayList<?> && ((ArrayList<?>)message).size() == 2){
+		if (message instanceof ArrayList<?> && ((ArrayList<?>) message).size() == 2) {
 			// ArrayList message from system means this actor is a
-			log.info("["+getSelf().path().name()+"] received message from ["+ getSender().path().name() +"]");
+			log.info("[" + getSelf().path().name() + "] received message from [" + getSender().path().name() + "]");
 
 			try {
 				// Update the reference to the transmitter
-				this.refB = ((ArrayList<ActorRef>)message).get(0);
+				this.refB = ((ArrayList<ActorRef>) message).get(0);
 				log.info("B reference updated ! New reference is: {}", this.refB);
-	
+
 				// Update the reference to b
-				this.refC = ((ArrayList<ActorRef>)message).get(1);
+				this.refC = ((ArrayList<ActorRef>) message).get(1);
 				log.info("C reference updated ! New reference is: {}", this.refC);
 			} catch (Exception e) {
 				e.printStackTrace();

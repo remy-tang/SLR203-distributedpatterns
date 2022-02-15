@@ -1,7 +1,8 @@
 package demo;
 
 public class Unsubscribe {
-	
-	Unsubscribe() {};
+
+	Unsubscribe() {
+	}
 
 }

@@ -9,7 +9,7 @@ public class Message {
 		this.sequenceNumber = sequenceNumber;
 		this.content = content;
 	}
-	
+
 	public int getSequenceNumber() {
 		return sequenceNumber;
 	}
@@ -17,9 +17,9 @@ public class Message {
 	public String getContent() {
 		return content;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "[" + sequenceNumber + "] " +  content;
+		return "[" + sequenceNumber + "] " + content;
 	}
 }
